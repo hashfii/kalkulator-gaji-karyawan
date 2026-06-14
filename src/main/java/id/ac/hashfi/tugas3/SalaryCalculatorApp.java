@@ -165,7 +165,7 @@ public class SalaryCalculatorApp extends Application {
         Label panelTitle = new Label("Rincian Gaji");
         panelTitle.getStyleClass().add("panel-title");
 
-        Label panelSubtitle = new Label("Breakdown hasil sesuai input terakhir.");
+        Label panelSubtitle = new Label("Rincian hasil sesuai input terakhir.");
         panelSubtitle.getStyleClass().add("panel-subtitle");
 
         basicSalaryValue = createValueLabel();
@@ -184,7 +184,7 @@ public class SalaryCalculatorApp extends Application {
                 buildResultRow("Total Gaji", totalPayValue)
         );
 
-        Label formulaTitle = new Label("Formula");
+        Label formulaTitle = new Label("Rumus");
         formulaTitle.getStyleClass().add("section-label");
 
         VBox panel = new VBox(18, panelTitle, panelSubtitle, resultGrid, new Separator(), formulaTitle, formulaValue);
@@ -245,10 +245,10 @@ public class SalaryCalculatorApp extends Application {
     }
 
     private PayrollResult calculatePayroll(String employeeClass, int overtimeHours) {
-        // Array gaji sesuai soal: index 0=A, index 1=B, index 2=C.
+        // Array untuk menyimpan gaji pokok: index 0=A, index 1=B, index 2=C.
         double[] basicSalaryArray = {5000000, 6500000, 9500000};
 
-        // Array persentase lembur sesuai soal: index 0=30%, 1=32%, 2=34%, 3=36%, 4=38%.
+        // Array untuk menyimpan persentase lembur: index 0=30%, 1=32%, 2=34%, 3=36%, 4=38%.
         int[] overtimePercentageArray = {30, 32, 34, 36, 38};
 
         int salaryIndex;
