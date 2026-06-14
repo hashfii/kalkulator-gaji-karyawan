@@ -1,0 +1,5 @@
+out/
+.javafx-cache/
+target/
+dist/
+*.class
